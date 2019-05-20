@@ -1,20 +1,46 @@
-
-// / il faut ajouter tous les composants
-
-import PageFrProjects from './pages/PageFrProjects';
-import PageFrProjectDetail from './pages/PageFrProjectDetail'
-
+import PageFrHome from './pages/PageFrHome'
+import PageFrProjects from './pages/PageFrProjets';
+import PageFrProjectDetail from './pages/PageFrProjetDetails'
+import dojo from './components/dojoArnaud/AppArnaud'
+import PageFrPublications from './pages/PageFrPublications'
+import PageFrProfil from './pages/PageFrProfil'
+import PageFrContact from './pages/PageFrContact'
 
 const routes = [
   {
-    path: '/',
-    name: 'Projets',
+    path: '/', // Machu Pichu seul
+    name: 'home',
+    component: PageFrHome,
+  },
+  {
+    path: '/projets',
+    name: 'projets',
     component: PageFrProjects,
   },
   {
-    path: '/simpson',
-    name: 'Détails projet',
+    path: '/details', // Machu Pichu ++
+    name: 'details',
     component: PageFrProjectDetail,
+  },
+  {
+    path: '/dojo',  // title body form
+    name: 'dojoArnaud',
+    component: dojo,
+  },
+  {
+    path: '/publications',
+    name: 'publications',
+    component: PageFrPublications
+  },
+  {
+    path: '/profil',
+    name: 'profil',
+    component: PageFrProfil
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: PageFrContact
   }
 ]
 
