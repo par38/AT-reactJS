@@ -16,15 +16,15 @@ const FrProjetsCardsM = (
   //console.log("CardsM props = " + props)
   return (
     <div className="col s6 m6 l6">
-      <div className="card hoverable">
-        <div className="card-image" id="card-image-at"
-          // style="background-image:url("+${image}+")"
-        >
+      <div className="card">
+        <div className="card-image hoverable">
           <img
             className="responsive-img"
             src={image}
             alt={character}
-            height="200"        
+
+            // *très important : permet la responsivité de l'image
+            height="200"
             />
         </div>
         <div className="card-content" id="card-content-at">
