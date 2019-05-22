@@ -1,16 +1,16 @@
 .card{
   margin: 1vw;
   background-color: #fff;
-  width: 35vw;
-  height: 32vw;
+  width: 30vw;
+  height: 29vw;
   box-shadow: none;
 }
 
 .card-image {
   background-size: cover;
   overflow: hidden;
-  width: 35vw;
-  height: 27vw;
+  width: 30vw;
+  height: 23vw;
   display: flex;
   align-items: center
 
@@ -18,8 +18,8 @@
 
 #card-content-at{
   font-family: 'Rajdhani', sans-serif;
-  
   font-size:calc(7px + 1.5vw);
-  height: 3vw;
+  height: 5vw;
+  line-height: 1;
   padding: 0;
 }
