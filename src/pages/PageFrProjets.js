@@ -1,6 +1,6 @@
 
-// / test avec Simpsons
-// / sans mise en page
+// / test avec API Simpsons
+// / avec cards Materialize-css
 // / PageFrProjets
 // / FrProjetsCardsAxios (class)
 // / + FrProjetsCardsM(fonction)

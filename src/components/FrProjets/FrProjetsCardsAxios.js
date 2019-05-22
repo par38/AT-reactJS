@@ -30,11 +30,12 @@ class FrProjetsCardsAxios extends Component {
 
 	// / récup des données brutes, sous forme de tableau d'objets
 	getProjectsData = async () => {
-		const response = await axios.get('https://thesimpsonsquoteapi.glitch.me/quotes?count=10');
+		const response = await axios.get('https://thesimpsonsquoteapi.glitch.me/quotes?count=6');
 		// / MàJ du state initial, via le setState
 		this.setState({
 			projectsData: response.data
 		});
+		console.log(this.setState)
 	};
 
 	render() {
@@ -45,22 +46,20 @@ class FrProjetsCardsAxios extends Component {
 
 		return (
 			<div>
-				<div>
-					<h2>props</h2>
-					{projectsData.map((elem) => <FrProjetsCardsM {...elem} key={elem.character} />)}
+				<div className="container">
+					<h1>props depuis FrProjetsCardsM <br />map + ...elem</h1>
+
+					<div className="row">
+						{projectsData.map((elem) => <FrProjetsCardsM {...elem} key={elem.character} />)}
+					</div>
 				</div>
 
-				<div>
-					<h1>retourne directement ici</h1>
-					
-						{projectsData.map((elem) => (
-							
+				{/* <div>
+					<h1>retourne directement ici</h1>					
+						{projectsData.map((elem) => (							
 								<img src={elem.image} alt={elem.character} />
-							
 						))}
-					
-				</div>
-
+				</div> */}
 
 			</div>
 		);
