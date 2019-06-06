@@ -1,14 +1,13 @@
 import PageFrHome from './pages/PageFrHome'
 import PageFrProjects from './pages/PageFrProjets';
-import PageFrProjectDetail from './pages/PageFrProjetDetails'
-import dojo from './components/dojoArnaud/AppArnaud'
+import PageFrProjetDetail from './pages/PageFrProjetDetails'
 import PageFrPublications from './pages/PageFrPublications'
 import PageFrProfil from './pages/PageFrProfil'
 import PageFrContact from './pages/PageFrContact'
 
 const routes = [
   {
-    path: '/', // Machu Pichu seul
+    path: '/home',
     name: 'home',
     component: PageFrHome,
   },
@@ -18,14 +17,9 @@ const routes = [
     component: PageFrProjects,
   },
   {
-    path: '/details', // Machu Pichu ++
+    path: '/details',
     name: 'details',
-    component: PageFrProjectDetail,
-  },
-  {
-    path: '/dojo',  // title body form
-    name: 'dojoArnaud',
-    component: dojo,
+    component: PageFrProjetDetail,
   },
   {
     path: '/publications',

@@ -4,7 +4,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import 'materialize-css/dist/css/materialize.min.css';
 
@@ -20,14 +20,27 @@ import routes from './routes';
 
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router>
     <Switch>
+      {/*// / les 2 solutions fonctionnent */}
+
+      {/* // / solution 1 
       {routes.map(({ path, component: C }) => (
         <Route
           exact path={path}
           key={path}
           render={props => <C {...props} />} 
+        /> 
+        */}
+        
+        {/* // / solution 2 */}
+        {routes.map(({ path, component }) => (
+        <Route
+          exact path={path}
+          key={path}
+          component={component}
         />
+        
       ))}
       <Route
           exact path="/*"
@@ -35,7 +48,7 @@ ReactDOM.render(
         />
 
     </Switch>
-  </BrowserRouter>,
+  </Router>,
   document.getElementById('root')
 );
 
