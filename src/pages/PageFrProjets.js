@@ -6,6 +6,7 @@
 // / + FrProjetsCardsM(fonction)
 
 import React from 'react'
+import FrMenu from '../components/FrMenu/FrMenu'
 
 // + import FrHeader from '../components/FrHeader'
 import FrProjetsCardsAxios from '../components/FrProjets/FrProjetsCardsAxios'
@@ -13,6 +14,7 @@ import FrProjetsCardsAxios from '../components/FrProjets/FrProjetsCardsAxios'
 const PageFrProjets = () => {
   return (
     <div>
+      <FrMenu />
       {/* // +<FrHeader /> */}
       <FrProjetsCardsAxios />
     

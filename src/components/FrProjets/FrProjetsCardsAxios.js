@@ -1,27 +1,17 @@
-// / test avec API simpson
-// / sans mise en page
 // / PageFrProjets
 // / FrProjetsCardsAxios (class)
-// / + FrProjetsCardsM(fonction)
+// / FrProjetsCardsM(fonction)
 
 import React, { Component } from 'react';
 import axios from 'axios';
 
 import FrProjetsCardsM from './FrProjetsCardsM';
-//import FrProjectCardsGrid from './FrProjectCardsGrid'
 
 // + import M from 'materialize-css';
 
 class FrProjetsCardsAxios extends Component {
 	state = {
-		projectsData: [
-			// {
-			//   quote: "Doughnuts? I told you I don't like ethnic food",
-			//   character:	"Mr. Burns",
-			//   image:"https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FMrBurns.png?1497567512188",
-			//   characterDirection: "Right"
-			// }
-		]
+		projectsData: []
 	};
 
 	componentDidMount() {
@@ -30,7 +20,8 @@ class FrProjetsCardsAxios extends Component {
 
 	// / récup des données brutes, sous forme de tableau d'objets
 	getProjectsData = async () => {
-		const response = await axios.get('https://thesimpsonsquoteapi.glitch.me/quotes?count=6');
+		// const response = await axios.get('https://thesimpsonsquoteapi.glitch.me/quotes?count=6');
+		const response = await axios.get('http://localhost:8001/api/projets')
 		// / MàJ du state initial, via le setState
 		this.setState({
 			projectsData: response.data
@@ -47,14 +38,12 @@ class FrProjetsCardsAxios extends Component {
 		return (
 			<div>
 				<div className="container">
-					<h1>props depuis FrProjetsCardsM <br />map + ...elem</h1>
-
 					<div className="row">
-						{projectsData.map((elem) => <FrProjetsCardsM {...elem} key={elem.character} />)}
+						{projectsData.map((elem) => <FrProjetsCardsM {...elem} key={elem.id} />)}
 					</div>
 				</div>
 
-				{/* <div>
+				{/* <div>     // Simpsons (image et character)
 					<h1>retourne directement ici</h1>					
 						{projectsData.map((elem) => (							
 								<img src={elem.image} alt={elem.character} />
