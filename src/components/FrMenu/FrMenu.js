@@ -9,6 +9,9 @@ class FrMenu extends Component {
 
   componentDidMount() {
     var elems = document.querySelectorAll('.sidenav');
+    // ? *******************************************************************************
+    // ? TODO : une fois changé de page en cliquant sur le menu, la page reste grise ???
+    // ? *******************************************************************************
     M.Sidenav.init(elems, {
       edge: "right",
       inDuration: 250,
@@ -19,7 +22,10 @@ class FrMenu extends Component {
   render() {
     return (
       <div>
-          <ul className="sidenav" id="slide-out">
+        <ul className="sidenav" id="slide-out">
+          {/* // / ****************************************** */}
+          {/* // / no /details, /admin or null in the sidenav */}
+          {/* // / ****************************************** */}
             {routes.filter(elem => !elem.path.includes('/details') && !elem.path.includes('/admin') && elem.name != null)
               .map(prop => (
 
@@ -39,10 +45,9 @@ class FrMenu extends Component {
           </ul>
             
 
-          <a href="/home" data-target="slide-out" class="sidenav-trigger right">
-            <i class="material-icons">menu</i>
+          <a href="/home" data-target="slide-out" className="sidenav-trigger right">
+            <i className="material-icons">menu</i>
           </a>
-
 
       </div>
 
