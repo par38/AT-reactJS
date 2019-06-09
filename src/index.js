@@ -33,7 +33,9 @@ ReactDOM.render(
         /> 
         */}
         
-        {/* // / solution 2 */}
+      {/* // / solution 2 */}
+      {/* EXACT match with /details /details/ /details/... */}
+      {/* don't use STRICT, who will match only with /details */}
         {routes.map(({ path, component }) => (
         <Route
           exact path={path}

@@ -26,20 +26,21 @@ class FrProjetsCardsAxios extends Component {
 		this.setState({
 			projectsData: response.data
 		});
-		console.log(this.setState)
+		// . console.log(this.setState)
 	};
 
 	render() {
-		console.log('this.state.projectsData : ' + this.state.projectsData);
+		// . console.log('this.state.projectsData : ' + this.state.projectsData);
 
 		// / déconstruction du state et alias du this.state
 		const { projectsData } = this.state;
+		// . console.log("render projectsData : ",projectsData)
 
 		return (
 			<div>
 				<div className="container">
 					<div className="row">
-						{projectsData.map((elem) => <FrProjetsCardsM {...elem} key={elem.id} />)}
+						{projectsData.map((elem) => <FrProjetsCardsM {...elem} key={elem.project_id} />)}
 					</div>
 				</div>
 
