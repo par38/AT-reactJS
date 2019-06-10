@@ -26,18 +26,15 @@ class FrProjetDetails extends Component {
   }
     
   getProjectDetails = async () => {
-    // / *****************************************************************************
-    // / URL
-    // / *****************************************************************************
-    const parsedUrl = new URL(window.location.href);
-    console.log("parsedUrl : ", parsedUrl)
 
-    // / *****************************************************************************
-    // / :id
-    // / *****************************************************************************
+    // / URL *************************************
+    const parsedUrl = new URL(window.location.href);
+    // . console.log("parsedUrl : ", parsedUrl)
+
+    // / :id *************************************
     const idRegex = /\d+$/
     const projectNumber = parsedUrl.href.match(idRegex)
-    console.log("id :", projectNumber);
+    //  .console.log("id :", projectNumber);
     // const projectNumber = parsedUrl.href.match(idRegex)
     // console.log("id :", projectNumber);
 
@@ -47,28 +44,29 @@ class FrProjetDetails extends Component {
   };
 
   render() {
-    // .console.log("render : ",this.state.isLoading)
-    console.log("render this.state.projectDetails : ", this.state.projectDetails)
+    // . console.log("render : ",this.state.isLoading)
+    // . console.log("render this.state.projectDetails : ", this.state.projectDetails)
     
-    // / *****************************************************************************
-    // / destructuration : plusieurs photos, il faut map
-    // / *****************************************************************************
-    const { projectDetails, isLoading } = this.state;
-    // * *****************************************************************************
-    // * GET : id, city, title, text, adress, date, surface_area, cost, client_name, 
-    // * partner_name, media_order, picture_large, alt, description, credit
-    // * *****************************************************************************
-    // .console.log("render projectDetails[1]: ", (projectDetails[1]))
-    console.log("render projectDetails: ", (projectDetails))
 
-    // / *****************************************************************************
+    // / destructuration : plusieurs photos, il faut map
+    const { projectDetails, isLoading } = this.state;
+
+    // * GET : id, city, title, text, adress, date, surface_area, cost, client_name, profile_picture
+    // * partner_name, media_order, picture_large, alt, description, credit
+
+    // + PROJECTS project_id, project_published, project_order, type_of_project, city, title, text, address, date, surface_area, cost
+    // + CLIENTS client_name, 
+    // + PARTNERS partner_name, 
+    // + MEDIA alt, description, main, picture_large, media_order, media_published, 
+    // + CREDITS credit 
+    // + ORDER BY m.media_order
+    // . console.log("render projectDetails[1]: ", (projectDetails[1]))
+    // . console.log("render projectDetails: ", (projectDetails))
+
     // / regex sélectionnant seulement les 4 premières chiffre = année
-    // / *****************************************************************************
     const anneeRegex = /\d{4}/
 
-    // / *****************************************************************************
     // / object contenant la photo principale
-    // / *****************************************************************************
     const mainPicture = projectDetails.filter(main => main.main === 1)
     // .console.log("render mainPicture : ", mainPicture)
 
@@ -81,7 +79,7 @@ class FrProjetDetails extends Component {
         
             <div>
 
-              {/* // ? ******************* TODO PARALLAX image principale ********************************/}
+              {/* // ? *** TODO PARALLAX image principale *******/}
               <div>
                 <img
                   className="image-main 
@@ -124,8 +122,7 @@ class FrProjetDetails extends Component {
 
               {/* // / PHOTOS */}
               {projectDetails
-                .filter(photo =>
-                  photo.main !== 1)
+                .filter(photo => photo.main !== 1)
                 .filter(photo => photo.media_published === 1)
                 .map(photo => (
                   <div key={photo.media_order}>
