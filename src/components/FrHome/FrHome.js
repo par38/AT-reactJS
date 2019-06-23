@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import './FrHome.css';
-
+// import FrHeader from '../FrHeader/FrHeader'
 class FrHome extends Component {
   state = {
     homePicture: [],

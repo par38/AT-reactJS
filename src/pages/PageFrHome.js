@@ -1,18 +1,16 @@
 import React from 'react'
 
-import FrMenu from '../components/FrMenu/FrMenu'
+import FrHeader from '../components/FrHeader/FrHeader'
 import FrHome from '../components/FrHome/FrHome'
-// /after create FrHeader and FrBurger : uncomment
-// +import FrHeader from '../components/FrHeader/FrHeader'
 
 import './PageFrHomeGrids.css';
 
 const PageFrHome = () => {
   return (
     <div>
-        <FrMenu />
-        <FrHome />
-    {/* <div className="grid-container">
+      <FrHeader />
+      <FrHome />
+      {/* <div className="grid-container">
       
       >>>>>> voir si on peut imbriquer header en main !! <<<<<<<<<
       <main className="grid-item">
