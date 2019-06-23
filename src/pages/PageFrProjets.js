@@ -1,23 +1,22 @@
 
-// / test avec API Simpsons
 // / avec cards Materialize-css
 // / PageFrProjets
 // / FrProjetsCardsAxios (class)
-// / + FrProjetsCardsM(fonction)
+// / FrProjetsCardsM(fonction)
 
 import React from 'react'
-import FrMenu from '../components/FrMenu/FrMenu'
+// import FrMenu from '../components/FrMenu/FrMenu'
 
-// + import FrHeader from '../components/FrHeader'
+import FrHeader from '../components/FrHeader/FrHeader'
 import FrProjetsCardsAxios from '../components/FrProjets/FrProjetsCardsAxios'
 
 const PageFrProjets = () => {
   return (
     <div>
-      <FrMenu />
-      {/* // +<FrHeader /> */}
+      <FrHeader />
+      {/* <FrMenu /> */}
       <FrProjetsCardsAxios />
-    
+
     </div>
   )
 }

@@ -23,11 +23,11 @@ const FrProjetsCardsM = (
   // / afin de le remplacer par des tirets
   // const regexId = /[\s\\.,:;?!_€$<>]/gi;
   // const projectLink = title.toLowerCase().replace(regexId, "-").concat("/", project_id)
-  // console.log("projectLink : ", projectLink)
+  // . console.log("projectLink : ", projectLink)
 
   // / projectId = simple project id
   const projectId = project_id
-  console.log("projectId : " + projectId)
+  // . console.log("projectId : " + projectId)
 
   return (
     <div className="col s6 m6 l6">

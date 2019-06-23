@@ -9,9 +9,9 @@ class FrMenu extends Component {
 
   componentDidMount() {
     var elems = document.querySelectorAll('.sidenav');
-    // ? *******************************************************************************
+
     // ? TODO : une fois changé de page en cliquant sur le menu, la page reste grise ???
-    // ? *******************************************************************************
+
     M.Sidenav.init(elems, {
       edge: "right",
       inDuration: 250,
@@ -23,31 +23,35 @@ class FrMenu extends Component {
     return (
       <div>
         <ul className="sidenav" id="slide-out">
-          {/* // / ****************************************** */}
-          {/* // / no /details, /admin or null in the sidenav */}
-          {/* // / ****************************************** */}
-            {routes.filter(elem => !elem.path.includes('/details') && !elem.path.includes('/admin') && elem.name != null)
-              .map(prop => (
 
-              <li>
+          {/* // / no /details, /admin or null in the sidenav */}
+          {routes
+            .filter(elem =>
+              !elem.path.includes('/details') && !elem.path.includes('/admin') &&
+              elem.name != null
+            )
+
+            .map(prop => (
+
+              <li key={prop.path}>
                 <NavLink
                   className="waves-effect"
                   exact
                   to={prop.path}
-                  key={prop.path}
                   activeClassName="active"
                   activeStyle={{ color: 'LightGray' }}
                 >
                   {prop.name}
                 </NavLink>
               </li>
-            ))}
-          </ul>
-            
+            ))
+          }
+        </ul>
 
-          <a href="/home" data-target="slide-out" className="sidenav-trigger right">
-            <i className="material-icons">menu</i>
-          </a>
+
+        <a href="/home" data-target="slide-out" className="sidenav-trigger right">
+          <i className="material-icons">menu</i>
+        </a>
 
       </div>
 

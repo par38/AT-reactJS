@@ -1,15 +1,16 @@
 import React from 'react'
 
-import FrMenu from '../components/FrMenu/FrMenu'
+import FrHeader from '../components/FrHeader/FrHeader'
+// import FrMenu from '../components/FrMenu/FrMenu'
 import FrProfil from '../components/FrProfil/FrProfil'
-// import FrProfilPhoto from ''
+
 
 const PageFrProfil = () => {
   return (
     <div>
-      <FrMenu />
+      <FrHeader />
+      {/* <FrMenu /> */}
       <FrProfil />
-      {/* <FrProfilPhoto /> */}
     </div>
   )
 }
