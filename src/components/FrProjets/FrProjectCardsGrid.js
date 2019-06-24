@@ -1,14 +1,14 @@
 import React from 'react';
-//import axios from 'axios'
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-// import GridList from '@material-ui/core/GridList';
+import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import ShareIcon from '@material-ui/icons/Share';
 import tileData from '../../assets/linkJpg';
+
 
 
 const styles = theme => ({
@@ -19,15 +19,15 @@ const styles = theme => ({
     overflow: 'hidden',
     backgroundColor: theme.palette.background.paper,
   },
-  // gridList: {
-  //   /// gridList is the external size of the mosaic of cards
-  //   width: 1000,
-  //   height: 'auto',
+  gridList: {
+    /// gridList is the external size of the mosaic of cards
+    width: 1000,
+    height: 'auto',
     
-  //   // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-  //   /// centered the image
-  //   transform: 'translateZ(0)',
-  // },
+    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+    /// centered the image
+    transform: 'translateZ(0)',
+  },
   titleBar: {
     /// shading of the black background of title
     background:
@@ -38,6 +38,7 @@ const styles = theme => ({
     color: 'white',
   },
 });
+
 
 /**
  * The example data is structured as follows:
@@ -57,17 +58,17 @@ const styles = theme => ({
  *   },
  * ];
  */
-function FrProjectsPicture(props) {
+const FrProjectCardsGrid = (props) => {
   const { classes } = props;
 
   return (
     <div className={classes.root}>
-      {/* <GridList     /// full list grid
-        cellHeight='auto'
+      <GridList     /// full list grid
+        //cellHeight='auto'
         //cellWidth={800}
         spacing={10}
         className={classes.gridList}
-      > */}
+      >
         {tileData.map(tile => (
           <GridListTile       /// one single tile
             key={tile.img}
@@ -88,13 +89,13 @@ function FrProjectsPicture(props) {
             />
           </GridListTile>
         ))}
-      {/* </GridList> */}
+      </GridList>
     </div>
   );
 }
 
-FrProjectsPicture.propTypes = {
+FrProjectCardsGrid.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(FrProjectsPicture);
+export default withStyles(styles)(FrProjectCardsGrid);
