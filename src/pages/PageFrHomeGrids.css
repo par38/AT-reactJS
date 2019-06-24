@@ -1,0 +1,28 @@
+.grid-container{
+  display: grid;
+}
+
+.grid-item {
+  padding: 20px;
+}
+
+/* /adaptation aux tailles d'écran */
+/* /tous pareils pour la "home" */
+@media screen {
+  .grid-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr;
+    grid-template-areas:
+    "header"
+    "main"
+  }
+  /* /nommage des areas */
+  header{
+    grid-area: header;
+    justify-self: end;
+    align-items: center;
+  }
+  main{
+    grid-area: main;
+  }
+}
