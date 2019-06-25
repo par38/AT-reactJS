@@ -32,22 +32,22 @@ ReactDOM.render(
           render={props => <C {...props} />} 
         /> 
         */}
-        
+
       {/* // / solution 2 */}
       {/* EXACT match with /details /details/ /details/... */}
       {/* don't use STRICT, who will match only with /details */}
-        {routes.map(({ path, component }) => (
+      {routes.map(({ path, component }) => (
         <Route
           exact path={path}
           key={path}
           component={component}
         />
-        
+
       ))}
       <Route
-          exact path="/*"
-          render={() => <h3>404</h3>}
-        />
+        exact path="/*"
+        render={() => <h3>404</h3>}
+      />
 
     </Switch>
   </Router>,

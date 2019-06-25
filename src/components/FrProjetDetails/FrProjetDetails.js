@@ -1,30 +1,18 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 
-
-// import M from 'materialize-css'
-
-// import './FrProjetDetails.css'
+import './FrProjetDetails.css'
 
 class FrProjetDetails extends Component {
   state = {
     projectDetails: [],
     isLoading: true
   }
-  
+
   componentDidMount() {
     this.getProjectDetails();
-
-    //   // $('.parallax').parallax();
-    //   // const elems = document.querySelectorAll('.parallax');
-    //   // M.Parallax.init(
-    //   //    this.parallax
-    //   //     elems
-    //   // );
-    //   // M.AutoInit()
-    //   // M.Parallax.init()
   }
-    
+
   getProjectDetails = async () => {
 
     // / URL *************************************
@@ -46,7 +34,7 @@ class FrProjetDetails extends Component {
   render() {
     // . console.log("render : ",this.state.isLoading)
     // . console.log("render this.state.projectDetails : ", this.state.projectDetails)
-    
+
 
     // / destructuration : plusieurs photos, il faut map
     const { projectDetails, isLoading } = this.state;
@@ -74,46 +62,42 @@ class FrProjetDetails extends Component {
       <>
         {isLoading ?
           <div>Loading...</div> :
-  
+
           (
-        
+
             <div>
 
-              {/* // ? *** TODO PARALLAX image principale *******/}
-              <div>
-                <img
-                  className="image-main 
-                  // responsive-img
-                  "
-                  src={mainPicture[0].picture_large}
-                  alt={mainPicture[0].alt}
-                  key={mainPicture.media_order}
+              <div className="parallaxDiv" >
 
-                  // *très important : permet la responsivité de l'image
-                  // height="800"
-                />
-                <p>{mainPicture.credit}</p>
+                <div className="parallaxImg" style={{
+                  backgroundImage: `url(${mainPicture[0].picture_large})`
+                }} >
+                  <div id="divCredit">
+                    <p id="credit">&copy; {mainPicture[0].credit}</p>
+                  </div>
+                </div>
+                }
               </div>
 
 
               {/* // / TEXTES  */}
               <div className="section white">
                 <div className="row container">
-                  <h2 className="header">{projectDetails[0].city} - {projectDetails[0].title}</h2>
+                  <h1 className="header">{projectDetails[0].city} - {projectDetails[0].title}</h1>
 
                   {!!projectDetails[0].address
-                    ? <p className="grey-text text-darken-3 lighten-3">Adresse : {projectDetails[0].address}</p>
+                    ? <p>Adresse : {projectDetails[0].address}</p>
                     : ''
                   }
-    
-                  <p className="grey-text text-darken-3 lighten-3">Date : {projectDetails[0].date.match(anneeRegex)}</p>
-                  <p className="grey-text text-darken-3 lighten-3">Maîtrise d'ouvrage : {projectDetails[0].client_name}</p>
-                  <p className="grey-text text-darken-3 lighten-3">Surface : {projectDetails[0].surface_area} m²</p>
+
+                  <p>Date : {projectDetails[0].date.match(anneeRegex)}</p>
+                  <p>Maîtrise d'ouvrage : {projectDetails[0].client_name}</p>
+                  <p>Surface : {projectDetails[0].surface_area} m²</p>
                   <p className="grey-text text-darken-3 lighten-3">Coût : {projectDetails[0].cost} €</p>
 
-                  
+
                   {!!projectDetails[0].partner_name
-                    ? <p className="grey-text text-darken-3 lighten-3">Partenaires : {projectDetails[0].partner_name}</p>
+                    ? <p>Partenaires : {projectDetails[0].partner_name}</p>
                     : ''
                   }
 
@@ -125,13 +109,15 @@ class FrProjetDetails extends Component {
                 .filter(photo => photo.main !== 1)
                 .filter(photo => photo.media_published === 1)
                 .map(photo => (
-                  <div key={photo.media_order}>
+                  <div key={photo.media_order} className="containerImg">
                     <img
                       src={photo.picture_large}
                       alt={photo.alt}
                       className="responsive-img"
                     />
-                    <p>{photo.credit}</p>
+                    <div>
+                      <p id="credit">&copy; {photo.credit}</p>
+                    </div>
                   </div>
                 ))}
             </div>
