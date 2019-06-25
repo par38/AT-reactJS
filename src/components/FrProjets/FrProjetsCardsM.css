@@ -52,3 +52,7 @@
   transition: opacity .25s;
   opacity: 0.6;
 }
+
+#imgAT {
+  height: 23vw;
+}
