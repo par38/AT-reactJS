@@ -35,7 +35,7 @@ class FrMenu extends Component {
 
               <li key={prop.path}>
                 <NavLink
-                  className="waves-effect"
+                  className="waves-effect sidenav-close"
                   exact
                   to={prop.path}
                   activeClassName="active"
