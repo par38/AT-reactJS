@@ -1,36 +1,25 @@
-/* home {
-  width: 100%
-} */
-
-/* #container-home {
-  max-width: none;
-  width: 100vw;
-  display: block;
+.backgroundDiv {
   position: relative;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom:0;
+  height:100vh; 
+  overflow:hidden;
+}
 
-} */
-
-#image-home {
-  /* la photo est agrandie, en remplissant tout l'espace */
-  background-size: cover;
-  background-attachment: fixed;
+.backgroundImg {
+  position: absolute;
   background-position: center;
-  /* box-sizing: content-box; */
-  /* et l'exedent est caché */
-  overflow: hidden;
-
-  /* même largeur de la card */
-  max-width: none; 
-
-  /*hauteur moindre, pour laisser la place au texte */
+  background-size: cover;
+  width: 100%;
   height: 100vh; 
+} 
+.headerHome {
+  position: absolute;
+  width:100%;
+  top: 0vh;
+  left: 0vh;
+  line-height: calc(4vh);
+  vertical-align: middle;
+  padding: 0.6vw 0.6vw 0.6vw 0.6vw;
 
-  /* centre l'image */
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
+  /* / à voir, avec le client */
+  background: linear-gradient(to top,rgba(148, 191, 242, 0),rgba(148, 191, 242, 0.80));
 }

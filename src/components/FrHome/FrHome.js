@@ -5,8 +5,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import FrHeader from '../FrHeader/FrHeader'
 import './FrHome.css';
-// import FrHeader from '../FrHeader/FrHeader'
 class FrHome extends Component {
   state = {
     homePicture: [],
@@ -23,13 +23,12 @@ class FrHome extends Component {
       homePicture: response.data[0],
       isLoading: false
     })
-    console.log("this.state.homePicture getHomePicure : " + this.state.homePicture)
+    // . console.log("this.state.homePicture getHomePicure : " + this.state.homePicture)
   }
 
-
   render() {
-    console.log("this.state render : " + this.state)
-    const { homePicture: { picture_large, alt }, isLoading } = this.state;
+    // . console.log("this.state render : " + this.state)
+    const { homePicture: { picture_large }, isLoading } = this.state;
 
     return (
       <>
@@ -37,24 +36,15 @@ class FrHome extends Component {
           <div> Loading... </div>
           :
           (
-            <div>
-              <img
-                className="responsive-img"
-                id="image-home"
-                src={picture_large}
-                alt={alt}
+            <div className="backgroundDiv">
 
-                // *très important : permet la responsivité de l'image
-                height="500"
-              />
-              {/* <div className="container" id="container-home">   
-                  <div className="row">
-                    <div className="col s12 m12 l12">
-                      <p>{alt}</p>
-                    </div>
-                  </div>
-                </div> 
-                */}
+              <div className="backgroundImg" style={{
+                backgroundImage: `url(${picture_large})`
+              }} >
+                <div className="headerHome">
+                  <FrHeader />
+                </div>
+              </div>
             </div>
           )
         }
