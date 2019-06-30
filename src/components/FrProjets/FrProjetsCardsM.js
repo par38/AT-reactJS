@@ -30,7 +30,7 @@ const FrProjetsCardsM = (
   // . console.log("projectId : " + projectId)
 
   return (
-    <div className="col s6 m6 l6">
+    <div className="col s6 m6 l6" id="no-border">
 
       {/* // ? details/title-kebab-case/3 */}
       {/* // / details/1 */}
@@ -54,11 +54,8 @@ const FrProjetsCardsM = (
             <p>{city} - {title}</p>
             <p>{title}</p>
           </div>
-
         </div>
-
       </NavLink>
-
     </div>
   )
 }

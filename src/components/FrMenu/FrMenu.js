@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import M from 'materialize-css';
 import routes from '../../routes';
 
-// import Logo from '.'
+import './FrMenu.css'
 
 class FrMenu extends Component {
 

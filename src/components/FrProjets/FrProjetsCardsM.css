@@ -1,58 +1,70 @@
+.container {
+  width: 100vw;
+  max-width: 1600px;
+  /* margin:1vw; */
+} */
+
+#no-border {
+  /* margin: 1vw; */
+  padding: 0;
+  /* grid-column-gap: 5vw; */
+} 
+
 .card{
-  background-color: #fff;
-
+  /* background-color: #fff; */
+  /* column-gap: 2vw; */
   /* vw responsive */
-  margin: 1vw;
+  /* margin-left: 1vw; */
+  /* margin-right: 1vw; */
+/* 
+  width: 46vw;
+  height: 29vw; */
   
-  width: 30vw;
-  height: 29vw;
-
   /* supprime le cadre et l'ombre de la card Materialize */
-  box-shadow: none;
+  box-shadow: none;           /* / OK en double card + hover*/
 }
 
 .card-image {
   /* la photo est agrandie, en remplissant tout l'espace */
-  background-size: cover;
+  background-size: cover;     /* / OK, ne pas toucher */
   /* et l'exedent est caché */
-  overflow: hidden;
-
+  overflow: hidden;           /* / OK, ne pas toucher */
+  
   /* même largeur de la card */
-  width: 30vw;
-  /* hauteur moindre, pour laisser la place au texte */
-  height: 23vw;
-
+  /* width: 100%; */
+  height: 36vw;
+  
   /* centre l'image */
-  display: flex;
-  align-items: center
-
-}
-
-#card-content-at{
-
-  font-family: 'Rajdhani', sans-serif;
-
-  /* font-size responsive, avec une taille minimale */
-  font-size:calc(7px + 1.5vw);
-
-  height: 5vw;
-
-  /* reduction de l'interligne */
-  line-height: 1;
-
-  /* effacement du padding du texte, prévu par Materialize */
-  padding: 0;
-
-}
-
-.hoverable:hover {
-  /* supprime le cadre et l'ombre de la card Materialize */
-  box-shadow: none;
-  /* effet provisoire d'opacité */
-  transition: opacity .25s;
-  opacity: 0.6;
+  /* display: flex;
+  align-items: center; */
+  
 }
 
 #imgAT {
-  height: 23vw;
+  height: 36vw;               /* / OK, ne pas toucher en double #imgAT + .card-image */
+} 
+
+#card-content-at {
+  
+  font-family: 'Rajdhani', sans-serif; /* ? à placer en styled-components */
+
+  /* font-size responsive, avec une taille minimale */
+  font-size:calc(7px + 1.5vw); /* ? à placer en styled-components */
+  
+  height: 5vw; /* ? à placer en styled-components */
+  
+  /* reduction de l'interligne */
+  /* line-height: 1; */  /* ? à placer en styled-components */
+  
+  /* effacement du padding du texte, prévu par Materialize */
+  padding-left: 0;           /* / OK, ne pas toucher */
+  
+}
+
+.hoverable:hover {           /* / OK, ne pas toucher */
+  /* supprime le cadre et l'ombre de la card Materialize */
+  box-shadow: none;          /* / OK en double card + hover*/
+  /* effet provisoire d'opacité */
+  transition: opacity .25s;  /* / OK, ne pas toucher */
+  opacity: 0.6;              /* / OK, ne pas toucher */
 }
