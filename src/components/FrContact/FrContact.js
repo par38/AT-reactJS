@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 
+import './FrContact.css'
 
 // / http://localhost:8000/contact
 // * GET : address_street, address_city, mail, tel, linkedin
@@ -33,7 +34,7 @@ class FrContact extends Component {
           <div>Loading...</div> :
 
           (
-            <div>
+            <div className="contact">
               <p>{address_street}</p>
               <p>{address_city}</p>
               <a href={`mailto:${mail}`}>{mail}</a>
@@ -45,7 +46,7 @@ class FrContact extends Component {
             </div>
           )
         }
-        </>
+      </>
     )
   }
 }
