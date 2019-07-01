@@ -21,5 +21,6 @@
   padding: 0.6vw 0.6vw 0.6vw 0.6vw;
 
   /* / à voir, avec le client */
-  background: linear-gradient(to top,rgba(148, 191, 242, 0),rgba(148, 191, 242, 0.80));
+  /* background: linear-gradient(to top,rgba(148, 191, 242, 0),rgba(148, 191, 242, 0.80)); */
+  /* background: linear-gradient(to top,rgba(241, 243, 245, 0),rgba(248, 249, 250, 0.8)); */
 }
