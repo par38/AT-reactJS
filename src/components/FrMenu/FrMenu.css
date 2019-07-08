@@ -4,3 +4,13 @@
   vertical-align: middle;
   margin-right: 0;
 }
+
+.sidenav {
+  width: 50vw;
+}
+
+.fixed-menu {
+  position: fixed;
+  right: 0;
+  z-index: 5;
+}
