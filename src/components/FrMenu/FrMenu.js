@@ -49,7 +49,7 @@ class FrMenu extends Component {
         </ul>
 
 
-        <a href="/home" data-target="slide-out" className="sidenav-trigger right">
+        <a href="/home" data-target="slide-out" className="sidenav-trigger fixed-menu right">
           <i className="material-icons">menu</i>
         </a>
 
