@@ -85,7 +85,7 @@ class FrProjetDetails extends Component {
               {/* // / TEXTES  */}
               <div className="section white">
                 <div className="row container">
-                  <OneLine><H1 className="header">{projectDetails[0].city} - {projectDetails[0].title}</H1></OneLine>
+                  <H1 className="header">{projectDetails[0].city} - {projectDetails[0].title}</H1>
 
                   {!!projectDetails[0].address
                     ? <OneLine> <Paragraph>Adresse :</Paragraph><p>    </p> <H2>{projectDetails[0].address}</H2> </OneLine>

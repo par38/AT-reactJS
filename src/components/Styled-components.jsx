@@ -7,11 +7,11 @@ export const xlDesktop = `1201px`;
 // / FONTS-SIZES
 
 export const fontSizes = {
-  xxs: '1.2vh',
-  xs: '1.4vh',
-  s: '1.8vh',
-  m: '2.2vh',
-  l: '2.5vh',
+  xxs: '1.4vh',
+  xs: '1.8vh',
+  s: '2.2vh',
+  m: '2.4vh',
+  l: '2.8vh',
   xl: '3.5vh',
   xxl: '4vh'
 }
@@ -135,7 +135,7 @@ export const ProfilParagraph = styled.p`
 `;
 
 
-// /
+// / TEXTS MARGINS
 
 export const OneLine = styled.div`
   display: flex;
@@ -145,3 +145,21 @@ export const OneLine = styled.div`
   margin-right: 2vw;
   /*flex-wrap: wrap;*/
 `;
+
+// / ICON SIZE
+
+export const IconStyle = styled.i`
+  font-size: '20px';
+
+  @media (min-width: ${tablet}) {
+    font-size: '30px';
+  };
+
+  @media (min-width: ${desktop}) {
+    font-size: '35px';
+  };
+
+  @media (min-width: ${xlDesktop}) {
+    font-size: '100px';
+  };
+  `;
