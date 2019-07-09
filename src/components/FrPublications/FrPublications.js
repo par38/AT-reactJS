@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 
+import { OneLine, Paragraph, NotH2 } from '../Styled-components'
+
 class FrPublications extends Component {
   state = {
     publicationsData: [],
@@ -18,17 +20,23 @@ class FrPublications extends Component {
   }
 
   render() {
-  
+
     return (
 
       <div>
-        {this.state.publicationsData.map(publication => 
+        {this.state.publicationsData.map(publication =>
           <div key={publication.id}>
-            <p>{publication.date_biblio}</p>
-            <p>{publication.fr_biblio_text}</p>
-            <p>{publication.fr_biblio_revue}</p>
-            <br/>
-        </div>)}
+            <OneLine>
+              <Paragraph>{publication.date_biblio}</Paragraph>
+            </OneLine>
+            <OneLine>
+              <NotH2>{publication.fr_biblio_text}</NotH2>
+            </OneLine>
+            <OneLine>
+              <Paragraph>{publication.fr_biblio_revue}</Paragraph>
+            </OneLine>
+            <br />
+          </div>)}
       </div>
     )
   }

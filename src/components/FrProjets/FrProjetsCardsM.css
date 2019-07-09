@@ -1,12 +1,12 @@
 .container {
-  width: 100vw;
+  width: 96vw;
   max-width: 1600px;
-  /* margin:1vw; */
-} */
+  margin: 2vw;
+} 
 
 #no-border {
-  /* margin: 1vw; */
-  padding: 0;
+  /*margin: 2vw;*/
+  /*padding: 2vw;*/
   /* grid-column-gap: 5vw; */
 } 
 
@@ -45,20 +45,9 @@
 } 
 
 #card-content-at {
-  
-  font-family: 'Rajdhani', sans-serif; /* ? à placer en styled-components */
-
-  /* font-size responsive, avec une taille minimale */
-  font-size:calc(7px + 1.5vw); /* ? à placer en styled-components */
-  
-  height: 5vw; /* ? à placer en styled-components */
-  
-  /* reduction de l'interligne */
-  /* line-height: 1; */  /* ? à placer en styled-components */
-  
   /* effacement du padding du texte, prévu par Materialize */
   padding-left: 0;           /* / OK, ne pas toucher */
-  
+  padding-top: 1vw;          /* / OK, ne pas toucher */
 }
 
 .hoverable:hover {           /* / OK, ne pas toucher */
