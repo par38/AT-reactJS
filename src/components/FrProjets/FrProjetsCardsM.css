@@ -1,7 +1,7 @@
 .container {
-  width: 96vw;
+  width: 97.5vw;
   max-width: 1600px;
-  margin: 2vw;
+  margin: 2vw 1.25vw 2vw 1.25vw;
 } 
 
 #no-border {
