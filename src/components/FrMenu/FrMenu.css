@@ -1,9 +1,31 @@
 .material-icons {
-  color: black;
-  font-size: 50px;
-  vertical-align: middle;
-  margin-right: 0;
+  color: rgb(65, 66, 66);
 }
+
+@media ( max-width: 600px ) {
+  .material-icons {
+    font-size: 30px;
+  }
+}
+
+@media ( min-width: 601px ) {
+  .material-icons {
+    font-size: 35px;
+  }
+}
+
+@media ( min-width: 992px ) {
+  .material-icons {
+    font-size: 40px;
+  }
+}
+
+@media ( min-width: 1201px ) {
+  .material-icons {
+    font-size: 55px;
+  }
+}
+
 
 .sidenav {
   width: 50vw;
@@ -11,6 +33,7 @@
 
 .fixed-menu {
   position: fixed;
-  right: 0;
+  right: 2vw;
+  top: 1.75vw;
   z-index: 5;
 }

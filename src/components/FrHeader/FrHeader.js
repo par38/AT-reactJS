@@ -12,7 +12,7 @@ const FrHeader = () => {
       <img
         src={logo}
         alt="logo Atelier TARABUSI"
-        width="300vw"
+
       />
     </div>
   )
