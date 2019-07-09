@@ -1,0 +1,59 @@
+.container {
+  width: 97.5vw;
+  max-width: 1600px;
+  margin: 2vw 1.25vw 2vw 1.25vw;
+} 
+
+#no-border {
+  /*margin: 2vw;*/
+  /*padding: 2vw;*/
+  /* grid-column-gap: 5vw; */
+} 
+
+.card{
+  /* background-color: #fff; */
+  /* column-gap: 2vw; */
+  /* vw responsive */
+  /* margin-left: 1vw; */
+  /* margin-right: 1vw; */
+/* 
+  width: 46vw;
+  height: 29vw; */
+  
+  /* supprime le cadre et l'ombre de la card Materialize */
+  box-shadow: none;           /* / OK en double card + hover*/
+}
+
+.card-image {
+  /* la photo est agrandie, en remplissant tout l'espace */
+  background-size: cover;     /* / OK, ne pas toucher */
+  /* et l'exedent est caché */
+  overflow: hidden;           /* / OK, ne pas toucher */
+  
+  /* même largeur de la card */
+  /* width: 100%; */
+  height: 36vw;
+  
+  /* centre l'image */
+  /* display: flex;
+  align-items: center; */
+  
+}
+
+#imgAT {
+  height: 36vw;               /* / OK, ne pas toucher en double #imgAT + .card-image */
+} 
+
+#card-content-at {
+  /* effacement du padding du texte, prévu par Materialize */
+  padding-left: 0;           /* / OK, ne pas toucher */
+  padding-top: 1vw;          /* / OK, ne pas toucher */
+}
+
+.hoverable:hover {           /* / OK, ne pas toucher */
+  /* supprime le cadre et l'ombre de la card Materialize */
+  box-shadow: none;          /* / OK en double card + hover*/
+  /* effet provisoire d'opacité */
+  transition: opacity .25s;  /* / OK, ne pas toucher */
+  opacity: 0.6;              /* / OK, ne pas toucher */
+}
