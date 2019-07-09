@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 
+import { H2, NotH2 } from '../Styled-components'
+
 import './FrContact.css'
 
 // / http://localhost:8000/contact
@@ -35,14 +37,17 @@ class FrContact extends Component {
 
           (
             <div className="contact">
-              <p>{address_street}</p>
-              <p>{address_city}</p>
-              <a href={`mailto:${mail}`}>{mail}</a>
+              <H2>{address_street}</H2>
+              <NotH2>{address_city}</NotH2>
+              <br />
+              <H2><a href={`mailto:${mail}`}>{mail}</a></H2>
               {/* vieille syntaxe :
             <a href={"mailto:" + mail}>email</a>
             */}
-              <p>{tel}</p>
-              <a href={linkedin} target="_blank" rel="noopener noreferrer">Linkedin</a>
+              <br />
+              <H2>{tel}</H2>
+              <br />
+              <NotH2><a href={linkedin} target="_blank" rel="noopener noreferrer">Linkedin</a></NotH2>
             </div>
           )
         }

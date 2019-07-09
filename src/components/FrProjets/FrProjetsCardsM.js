@@ -8,6 +8,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+// import styled from 'styled-components'
+import { H1, Paragraph } from '../Styled-components'
+
 import './FrProjetsCardsM.css'
 
 
@@ -51,8 +54,8 @@ const FrProjetsCardsM = (
             />
           </div>
           <div className="card-content" id="card-content-at">
-            <p>{city} - {title}</p>
-            <p>{title}</p>
+            <H1>{city} - {title}</H1>
+            <Paragraph>{title}</Paragraph>
           </div>
         </div>
       </NavLink>

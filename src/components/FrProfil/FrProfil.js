@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
+import { OneLine, ProfilParagraph } from '../Styled-components'
+
 class FrProfil extends Component {
   state = {
     profilData: [],
@@ -32,23 +34,22 @@ class FrProfil extends Component {
           : (
             <div>
               <div>
-              {profilData.map(photo => !!photo.profil_picture
-                ? (<img src={photo.profil_picture} alt={photo.alt} key={photo.id}/>)
-                : ''
+                {profilData.map(photo => !!photo.profil_picture
+                  ? (<img src={photo.profil_picture} alt={photo.alt} key={photo.id} />)
+                  : ''
                 )}
               </div>
 
               <div>
-              {profilData.map(text => !!text.profil_text_fr
-                ?
-                (<p key={text.id}>{text.profil_text_fr}</p>)
-                : ''
-              )}
+                {profilData.map(text => (
+                  <OneLine>
+                    <ProfilParagraph key={text.id}>{text.profil_text_fr}</ProfilParagraph>
+                  </OneLine>))}
+              </div>
+
             </div>
-              
-          </div>
-        )}
-      </> 
+          )}
+      </>
     )
   }
 }

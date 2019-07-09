@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 
+import { OneLine, H1, Paragraph, H2, NotH2 } from '../Styled-components'
+
 import './FrProjetDetails.css'
 
 class FrProjetDetails extends Component {
@@ -66,7 +68,7 @@ class FrProjetDetails extends Component {
           (
 
             <div>
-
+              {/* // / IMAGE PRINCIPALE ET CREDIT */}
               <div className="parallaxDiv" >
 
                 <div className="parallaxImg" style={{
@@ -83,21 +85,33 @@ class FrProjetDetails extends Component {
               {/* // / TEXTES  */}
               <div className="section white">
                 <div className="row container">
-                  <h1 className="header">{projectDetails[0].city} - {projectDetails[0].title}</h1>
+                  <OneLine><H1 className="header">{projectDetails[0].city} - {projectDetails[0].title}</H1></OneLine>
 
                   {!!projectDetails[0].address
-                    ? <p>Adresse : {projectDetails[0].address}</p>
+                    ? <OneLine> <Paragraph>Adresse :</Paragraph><p>    </p> <H2>{projectDetails[0].address}</H2> </OneLine>
                     : ''
                   }
 
-                  <p>Date : {projectDetails[0].date.match(anneeRegex)}</p>
-                  <p>Maîtrise d'ouvrage : {projectDetails[0].client_name}</p>
-                  <p>Surface : {projectDetails[0].surface_area} m²</p>
-                  <p className="grey-text text-darken-3 lighten-3">Coût : {projectDetails[0].cost} €</p>
+                  <OneLine>
+                    <Paragraph>Date : </Paragraph>
+                    <NotH2>{projectDetails[0].date.match(anneeRegex)}</NotH2>
+                  </OneLine>
+                  <OneLine>
+                    <Paragraph>Maîtrise d'ouvrage : </Paragraph>
+                    <H2>{projectDetails[0].client_name}</H2>
+                  </OneLine>
+                  <OneLine>
+                    <Paragraph>Surface : </Paragraph>
+                    <NotH2>{projectDetails[0].surface_area} m²</NotH2>
+                  </OneLine>
+                  <OneLine>
+                    <Paragraph className="grey-text text-darken-3 lighten-3">Coût : </Paragraph>
+                    <NotH2>{projectDetails[0].cost} €</NotH2>
+                  </OneLine>
 
 
                   {!!projectDetails[0].partner_name
-                    ? <p>Partenaires : {projectDetails[0].partner_name}</p>
+                    ? <OneLine> <Paragraph>Partenaires : </Paragraph> <H2>{projectDetails[0].partner_name}</H2> </OneLine>
                     : ''
                   }
 
