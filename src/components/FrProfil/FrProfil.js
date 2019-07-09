@@ -1,7 +1,20 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import styled from 'styled-components'
 
 import { OneLine, ProfilParagraph } from '../Styled-components'
+
+const Image = styled.img`
+  height: 40vh;
+  margin-right: 5vw;
+  margin-left: 10vw;
+  margin-bottom: .5vw;
+`;
+
+const Container = styled.div`
+  display:flex;
+  align-items: flex-end;
+`;
 
 class FrProfil extends Component {
   state = {
@@ -32,10 +45,11 @@ class FrProfil extends Component {
         {isLoading
           ? <div>is Loading...</div>
           : (
-            <div>
+            <Container>
+
               <div>
                 {profilData.map(photo => !!photo.profil_picture
-                  ? (<img src={photo.profil_picture} alt={photo.alt} key={photo.id} />)
+                  ? (<Image src={photo.profil_picture} alt={photo.alt} key={photo.id} />)
                   : ''
                 )}
               </div>
@@ -46,8 +60,7 @@ class FrProfil extends Component {
                     <ProfilParagraph key={text.id}>{text.profil_text_fr}</ProfilParagraph>
                   </OneLine>))}
               </div>
-
-            </div>
+            </Container>
           )}
       </>
     )
