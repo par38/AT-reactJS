@@ -2,18 +2,57 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import styled from 'styled-components'
 
-import { OneLine, ProfilParagraph } from '../Styled-components'
+import { OneLine, ProfilParagraph, tablet, desktop, xlDesktop } from '../Styled-components'
 
 const Image = styled.img`
   height: 40vh;
-  margin-right: 5vw;
-  margin-left: 10vw;
+  margin-right: 2vw;
+  margin-left: 2vw;
   margin-bottom: .5vw;
+`;
+
+const Order = styled.div`
+
+order: 1;
+
+@media (min-width: ${tablet}) {
+  order: 1;
+};
+
+@media (min-width: ${desktop}) {
+  order: -1;
+};
+
+@media (min-width: ${xlDesktop}) {
+  order: -1;
+};
 `;
 
 const Container = styled.div`
   display:flex;
+  flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: center;
+
+
+  @media (min-width: ${tablet}) {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+  };
+
+  @media (min-width: ${desktop}) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  };
+
+  @media (min-width: ${xlDesktop}) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  };
 `;
 
 class FrProfil extends Component {
@@ -47,12 +86,12 @@ class FrProfil extends Component {
           : (
             <Container>
 
-              <div>
+              <Order >
                 {profilData.map(photo => !!photo.profil_picture
                   ? (<Image src={photo.profil_picture} alt={photo.alt} key={photo.id} />)
                   : ''
                 )}
-              </div>
+              </Order>
 
               <div>
                 {profilData.map(text => (
