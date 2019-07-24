@@ -74,7 +74,7 @@ class FrProjetDetails extends Component {
                 <div className="parallaxImg" style={{
                   backgroundImage: `url(${mainPicture[0].picture_large})`
                 }} >
-                  <div>
+                  <div id="divCredit">
                     <p id="credit">&copy; {mainPicture[0].credit}</p>
                   </div>
                 </div>
@@ -104,22 +104,16 @@ class FrProjetDetails extends Component {
                   </OneLine>
                   <OneLine>
                     <Paragraph>Surface : </Paragraph>
-                    <NotH2>{projectDetails[0].surface_area} m² HON</NotH2>
+                    <NotH2>{projectDetails[0].surface_area} m²</NotH2>
                   </OneLine>
                   <OneLine>
                     <Paragraph className="grey-text text-darken-3 lighten-3">Coût : </Paragraph>
-                    <NotH2>{projectDetails[0].cost} € HT</NotH2>
+                    <NotH2>{projectDetails[0].cost} €</NotH2>
                   </OneLine>
 
 
                   {!!projectDetails[0].partner_name
                     ? <OneLine> <Paragraph>Partenaires : </Paragraph> <H2>{projectDetails[0].partner_name}</H2> </OneLine>
-                    : ''
-                  }
-
-
-                  {!!projectDetails[0].text
-                    ? <OneLine> <H2>{projectDetails[0].text}</H2> </OneLine>
                     : ''
                   }
 
@@ -137,10 +131,9 @@ class FrProjetDetails extends Component {
                       alt={photo.alt}
                       className="responsive-img"
                     />
-                    {!!photo.credit
-                      ? < div > <p id="credit">&copy; {photo.credit}</p> </div>
-                      : ''
-                    }
+                    <div>
+                      <p id="credit">&copy; {photo.credit}</p>
+                    </div>
                   </div>
                 ))}
             </div>
