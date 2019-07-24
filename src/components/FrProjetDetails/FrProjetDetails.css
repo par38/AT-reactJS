@@ -17,6 +17,7 @@
   position: relative;
   /* text-align: center;
   color: white; */
+  margin-bottom: 0.6vw;
 
 }
 .responsive-img{
@@ -26,12 +27,13 @@
 #credit{
   position: absolute;
   width:100%;
-  bottom: 0vh;
+  bottom: 5px;
   right: 0vh;
   line-height: calc(7px + 1.6vw);
   text-align: end;
   vertical-align: middle;
   padding: 0.6vw 0.6vw 0.6vw 0;
+  margin-bottom: 0;
 
   background: linear-gradient(to top,rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0.0));
 
