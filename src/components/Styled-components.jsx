@@ -120,6 +120,7 @@ export const ProfilParagraph = styled.p`
   font-family: 'Rajdhani';
   font-size: ${fontSizes.xxs};
   margin: 0.5vh 1vh 0.5vh 0;
+  text-align: justify;
 
   @media (min-width: ${tablet}) {
     font-size: ${fontSizes.xs};
