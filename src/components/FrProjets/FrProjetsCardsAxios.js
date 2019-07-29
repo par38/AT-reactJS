@@ -21,7 +21,7 @@ class FrProjetsCardsAxios extends Component {
 	// / récup des données brutes, sous forme de tableau d'objets
 	getProjectsData = async () => {
 		// const response = await axios.get('https://thesimpsonsquoteapi.glitch.me/quotes?count=6');
-		const response = await axios.get('http://localhost:8001/api/projets')
+		const response = await axios.get(`${process.env.REACT_APP_SERVEUR}/api/projets`)
 		// / MàJ du state initial, via le setState
 		this.setState({
 			projectsData: response.data

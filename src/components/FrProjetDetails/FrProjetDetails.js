@@ -28,7 +28,7 @@ class FrProjetDetails extends Component {
     // const projectNumber = parsedUrl.href.match(idRegex)
     // console.log("id :", projectNumber);
 
-    const response = await axios.get(`http://localhost:8001/api/details/${projectNumber}`);
+    const response = await axios.get(`${process.env.REACT_APP_SERVEUR}/api/details/${projectNumber}`);
     this.setState({ projectDetails: response.data, isLoading: false });
     //  .console.log("response.data :", response.data[1])
   };

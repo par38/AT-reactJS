@@ -18,7 +18,7 @@ class FrContact extends Component {
   }
 
   getContactData = async () => {
-    const response = await axios.get(`http://localhost:8001/api/contact`);
+    const response = await axios.get(`${process.env.REACT_APP_SERVEUR}/api/contact`);
     this.setState({ contactData: response.data[0], isLoading: false });
     // . console.log("response.data : ", response.data)
   }
