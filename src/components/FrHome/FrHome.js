@@ -18,7 +18,7 @@ class FrHome extends Component {
   }
 
   getHomePicture = async () => {
-    const response = await axios.get('http://localhost:8001/api/home')
+    const response = await axios.get(`${process.env.REACT_APP_SERVEUR}/api/home`)
     this.setState({
       homePicture: response.data[0],
       isLoading: false

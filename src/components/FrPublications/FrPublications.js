@@ -14,7 +14,7 @@ class FrPublications extends Component {
   }
 
   getPublicationsData = async () => {
-    const response = await axios.get(`http://localhost:8001/api/publications`)
+    const response = await axios.get(`${process.env.REACT_APP_SERVEUR}/api/publications`)
     this.setState({ publicationsData: response.data, isLoading: false })
     // . console.log("getPublicationsData response.data : ", response.data)
   }

@@ -66,7 +66,7 @@ class FrProfil extends Component {
   }
 
   getProfilData = async () => {
-    const response = await axios.get(`http://localhost:8001/api/profil`)
+    const response = await axios.get(`${process.env.REACT_APP_SERVEUR}/api/profil`)
     this.setState({ profilData: response.data, isLoading: false });
     // . console.log("getProfilData response.data : ", response.data)
   }

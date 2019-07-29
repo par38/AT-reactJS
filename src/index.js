@@ -12,6 +12,8 @@ import './index.css';
 
 import routes from './routes';
 
+require('dotenv').config();
+
 // import './components/FrHome/FrHome.js'
 // import PageFrHome from './pages/PageFrHome';
 // import PageFrProjects from './pages/PageFrProjects';
