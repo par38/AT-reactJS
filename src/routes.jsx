@@ -7,7 +7,7 @@ import PageFrContact from './pages/PageFrContact'
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'home',
     component: PageFrHome,
   },
