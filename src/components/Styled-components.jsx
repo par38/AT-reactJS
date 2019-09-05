@@ -70,23 +70,19 @@ export const H2 = styled.h2`
   color: rgb(26, 26, 26);
   font-family: 'Rajdhani';
   font-size: ${fontSizes.xs};
-  height: ${fontSizes.xs};
   line-height: 1;
   margin: 0.5vh 0 0.5vh 0;
 
   @media (min-width: ${tablet}) {
     font-size: ${fontSizes.s};
-    height: ${fontSizes.s}
   };
 
   @media (min-width: ${desktop}) {
     font-size: ${fontSizes.m};
-    height: ${fontSizes.m}
   };
 
   @media (min-width: ${xlDesktop}) {
     font-size: ${fontSizes.l};
-    height: ${fontSizes.l}
   };
 `;
 
