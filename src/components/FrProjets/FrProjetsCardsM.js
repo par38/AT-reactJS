@@ -9,7 +9,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 // import styled from 'styled-components'
-import { H1, Paragraph } from '../Styled-components'
+import { H2, Paragraph } from '../Styled-components'
 
 import './FrProjetsCardsM.css'
 
@@ -54,7 +54,7 @@ const FrProjetsCardsM = (
             />
           </div>
           <div className="card-content" id="card-content-at">
-            <H1>{city} - {title}</H1>
+            <H2>{city}</H2>
             <Paragraph>{title}</Paragraph>
           </div>
         </div>
