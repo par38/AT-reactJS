@@ -58,7 +58,7 @@ class FrProjetDetails extends Component {
 
     // / object contenant la photo principale
     const mainPicture = projectDetails.filter(main => main.main === 1)
-    // .console.log("render mainPicture : ", mainPicture)
+    // . console.log("render mainPicture : ", mainPicture)
 
     return (
       <>
@@ -74,9 +74,10 @@ class FrProjetDetails extends Component {
                 <div className="parallaxImg" style={{
                   backgroundImage: `url(${mainPicture[0].picture_large})`
                 }} >
-                  <div>
-                    <p id="credit">&copy; {mainPicture[0].credit}</p>
-                  </div>
+                  {!!mainPicture[0].credit
+                    ? < div > <p id="credit-parallax">&copy; {mainPicture[0].credit}</p> </div>
+                    : ''
+                  }
                 </div>
                 }
               </div>
@@ -90,30 +91,30 @@ class FrProjetDetails extends Component {
                   </OneLine>
 
                   {!!projectDetails[0].address
-                    ? <OneLine> <Paragraph>Adresse :</Paragraph><p>    </p> <H2>{projectDetails[0].address}</H2> </OneLine>
+                    ? <OneLine> <Paragraph>Adresse:</Paragraph><p>    </p> <H2>{projectDetails[0].address}</H2> </OneLine>
                     : ''
                   }
 
                   <OneLine>
-                    <Paragraph>Date : </Paragraph>
+                    <Paragraph>Date: </Paragraph>
                     <NotH2>{projectDetails[0].date.match(anneeRegex)}</NotH2>
                   </OneLine>
                   <OneLine>
-                    <Paragraph>Maîtrise d'ouvrage : </Paragraph>
+                    <Paragraph>Maîtrise d'ouvrage: </Paragraph>
                     <H2>{projectDetails[0].client_name}</H2>
                   </OneLine>
                   <OneLine>
-                    <Paragraph>Surface : </Paragraph>
+                    <Paragraph>Surface: </Paragraph>
                     <NotH2>{projectDetails[0].surface_area} m² HON</NotH2>
                   </OneLine>
                   <OneLine>
-                    <Paragraph className="grey-text text-darken-3 lighten-3">Coût : </Paragraph>
+                    <Paragraph className="grey-text text-darken-3 lighten-3">Coût: </Paragraph>
                     <NotH2>{projectDetails[0].cost} € HT</NotH2>
                   </OneLine>
 
 
                   {!!projectDetails[0].partner_name
-                    ? <OneLine> <Paragraph>Partenaires : </Paragraph> <H2>{projectDetails[0].partner_name}</H2> </OneLine>
+                    ? <OneLine> <Paragraph>Partenaires: </Paragraph> <H2>{projectDetails[0].partner_name}</H2> </OneLine>
                     : ''
                   }
 
@@ -138,7 +139,7 @@ class FrProjetDetails extends Component {
                       className="responsive-img"
                     />
                     {!!photo.credit
-                      ? < div > <p id="credit">&copy; {photo.credit}</p> </div>
+                      ? < div > <p id="credit-others">&copy; {photo.credit}</p> </div>
                       : ''
                     }
                   </div>

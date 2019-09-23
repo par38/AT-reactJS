@@ -24,7 +24,24 @@
   width: 100%;
 }
 
-#credit{
+#credit-parallax {
+  position: absolute;
+  width:100%;
+  bottom: 0px;
+  right: 0vh;
+  line-height: calc(7px + 1.6vw);
+  text-align: end;
+  vertical-align: middle;
+  padding: 0.6vw 0.6vw 0.6vw 0;
+  margin-bottom: 0;
+
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0.0));
+
+  color: white;
+  font-size: calc(7px + .4vw);
+}
+
+#credit-others {
   position: absolute;
   width:100%;
   bottom: 5px;
