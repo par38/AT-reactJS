@@ -36,6 +36,14 @@ class FrProjetsCardsAxios extends Component {
 		const { projectsData } = this.state;
 		// . console.log("render projectsData : ",projectsData)
 
+		// + PROJECTS project_id, project_published, project_order, type_of_project, city, title, text, address, date, surface_area, cost
+		// + CLIENTS client_name, 
+		// + PARTNERS partner_name, 
+		// + MEDIA alt, description, main, picture_large, media_order, media_published
+		// + CREDITS credit 
+		// + WHERE p.project_id = ? AND p.project_published =1
+		// + ORDER BY m.media_order
+
 		return (
 			<div>
 				<div className="container">
