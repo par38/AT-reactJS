@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import M from 'materialize-css';
+import 'materialize-css/dist/css/materialize.min.css'
 import routes from '../../routes';
 
 import './FrMenu.css'
@@ -9,8 +10,6 @@ class FrMenu extends Component {
 
   componentDidMount() {
     var elems = document.querySelectorAll('.sidenav');
-
-    // ? TODO : une fois changé de page en cliquant sur le menu, la page reste grise ???
 
     M.Sidenav.init(elems, {
       edge: "right",
