@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import M from 'materialize-css';
-import 'materialize-css/dist/css/materialize.min.css'
+
 import routes from '../../routes';
+
+import 'materialize-css/dist/css/materialize.min.css'
 
 import './FrMenu.css'
 
@@ -22,6 +24,7 @@ class FrMenu extends Component {
     return (
       <div>
         <ul className="sidenav" id="slide-out">
+          <br />
 
           {/* // / no /details, /admin or null in the sidenav */}
           {routes
@@ -34,12 +37,13 @@ class FrMenu extends Component {
 
               <li key={prop.path}>
                 <NavLink
-                  className="waves-effect sidenav-close"
+                  className="waves-effect sidenav-close sidenav-font"
                   exact
                   to={prop.path}
                   activeClassName="active"
                   activeStyle={{ color: 'LightGray' }}
                 >
+                  {/* / le sidenav de materialize perd l'effet active si utilisé avec Styled-components */}
                   {prop.name}
                 </NavLink>
               </li>

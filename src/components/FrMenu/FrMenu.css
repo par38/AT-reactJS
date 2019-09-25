@@ -1,3 +1,5 @@
+/* / ---------ICON ------------*/
+
 .material-icons {
   color: rgb(65, 66, 66);
 }
@@ -37,3 +39,28 @@
   top: 1.75vw;
   z-index: 5;
 }
+
+/* / -------- TEXT FONT ----------- */
+/* / le sidenav de materialize perd l'effet active si utilisé avec Styled-components */
+.sidenav li > a{
+  color: rgb(26, 26, 26);
+  font-family: 'Rajdhani';
+
+  font-size: 4vw;
+  height: 7vw;
+  line-height: 7vw;
+  padding: 0.75vw;
+  font-weight: 200;
+  margin-left: 3vw;
+}
+
+@media (min-width: 1200px) {
+  .sidenav li > a {
+    font-size: 1.2vw;
+    height: 3vw;
+    line-height: 3vw;
+    padding: 0.5vw;
+    font-weight: 200;
+    margin-left: 2vw;
+  }
+};
