@@ -49,14 +49,6 @@ class FrProjetsCardsAxios extends Component {
 						{projectsData.map((elem) => <FrProjetsCardsM {...elem} key={elem.project_id} />)}
 					</div>
 				</div>
-
-				{/* <div>     // Simpsons (image et character)
-					<h1>retourne directement ici</h1>					
-						{projectsData.map((elem) => (							
-								<img src={elem.image} alt={elem.character} />
-						))}
-				</div> */}
-
 			</div>
 		);
 	}

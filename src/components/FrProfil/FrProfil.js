@@ -75,9 +75,9 @@ class FrProfil extends Component {
     // . console.log("render this.state.profilData : ", this.state.profilData[0])
     // . console.log("render this.state : ", this.state)
 
-    //* profil_text_fr, profil_order_fr, profil_picture, alt
+    // * GET : profil_text_fr, profil_order_fr, profil_picture, alt
     const { profilData, isLoading } = this.state
-    //  .console.log("render destructure :",profilData)
+    // . console.log("render destructure :",profilData)
 
     return (
       <>

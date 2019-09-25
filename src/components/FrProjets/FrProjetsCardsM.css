@@ -10,28 +10,27 @@
 
 .card-image {
   /* la photo est agrandie, en remplissant tout l'espace */
-  background-size: cover;     /* / OK, ne pas toucher */
+  background-size: cover;
   /* et l'exedent est caché */
-  overflow: hidden;           /* / OK, ne pas toucher */
+  overflow: hidden;
   
-  /* même largeur de la card */
   height: 36vw;
 }
 
 #imgAT {
-  height: 36vw;               /* / OK, ne pas toucher en double #imgAT + .card-image */
+  height: 36vw;               /* / OK en double #imgAT + .card-image */
 } 
 
 #card-content-at {
   /* effacement du padding du texte, prévu par Materialize */
-  padding-left: 0;           /* / OK, ne pas toucher */
-  padding-top: 1vw;          /* / OK, ne pas toucher */
+  padding-left: 0;
+  padding-top: 1vw;
 }
 
-.hoverable:hover {           /* / OK, ne pas toucher */
+.hoverable:hover {
   /* supprime le cadre et l'ombre de la card Materialize */
-  box-shadow: none;          /* / OK en double card + hover*/
+  box-shadow: none;          /* / OK en double card + hover */
   /* effet provisoire d'opacité */
-  transition: opacity .25s;  /* / OK, ne pas toucher */
-  opacity: 0.6;              /* / OK, ne pas toucher */
+  transition: opacity .25s;
+  opacity: 0.6;
 }
