@@ -15,8 +15,6 @@
 
 .containerImg {
   position: relative;
-  /* text-align: center;
-  color: white; */
   margin-bottom: 0.6vw;
 
 }
@@ -51,9 +49,7 @@
   vertical-align: middle;
   padding: 0.6vw 0.6vw 0.6vw 0;
   margin-bottom: 0;
-
   background: linear-gradient(to top,rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0.0));
-
   color: white;
   font-size: calc(7px + .4vw);
 }
