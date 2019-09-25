@@ -1,25 +1,9 @@
 .container {
   width: 97.5vw;
-  max-width: 1872px;
-  margin: 2vw 1.25vw 2vw 1.25vw;
-} 
-
-#no-border {
-  /*margin: 2vw;*/
-  /*padding: 2vw;*/
-  /* grid-column-gap: 5vw; */
+  max-width: 97.5vw;
 } 
 
 .card{
-  /* background-color: #fff; */
-  /* column-gap: 2vw; */
-  /* vw responsive */
-  /* margin-left: 1vw; */
-  /* margin-right: 1vw; */
-/* 
-  width: 46vw;
-  height: 29vw; */
-  
   /* supprime le cadre et l'ombre de la card Materialize */
   box-shadow: none;           /* / OK en double card + hover*/
 }
@@ -31,13 +15,7 @@
   overflow: hidden;           /* / OK, ne pas toucher */
   
   /* même largeur de la card */
-  /* width: 100%; */
   height: 36vw;
-  
-  /* centre l'image */
-  /* display: flex;
-  align-items: center; */
-  
 }
 
 #imgAT {

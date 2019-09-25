@@ -74,6 +74,7 @@ class FrProjetDetails extends Component {
                 <div className="parallaxImg" style={{
                   backgroundImage: `url(${mainPicture[0].picture_large})`
                 }} >
+                  {/* /// !! IF EXISTS */}
                   {!!mainPicture[0].credit
                     ? < div > <p id="credit-parallax">&copy; {mainPicture[0].credit}</p> </div>
                     : ''

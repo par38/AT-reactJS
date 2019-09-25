@@ -7,8 +7,6 @@ import axios from 'axios';
 
 import FrProjetsCardsM from './FrProjetsCardsM';
 
-// + import M from 'materialize-css';
-
 class FrProjetsCardsAxios extends Component {
 	state = {
 		projectsData: []
