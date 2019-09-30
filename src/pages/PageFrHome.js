@@ -10,7 +10,6 @@ const PageFrHome = () => {
   return (
     <div>
       <FrHome />
-
     </div>
   )
 }

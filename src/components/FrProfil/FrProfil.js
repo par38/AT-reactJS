@@ -34,7 +34,6 @@ const Container = styled.div`
   align-items: flex-end;
   justify-content: center;
 
-
   @media (min-width: ${tablet}) {
     display:flex;
     flex-wrap: wrap;
@@ -79,32 +78,29 @@ class FrProfil extends Component {
     const { profilData, isLoading } = this.state
     // . console.log("render destructure :",profilData)
 
-    return (
+    if (isLoading) {
+      return <div>is Loading...</div>
+    } return (
       <>
-        {isLoading
-          ? <div>is Loading...</div>
-          : (
-            <Container>
+        <Container>
 
-              <Order >
-                {profilData.map(photo => !!photo.profil_picture
-                  ? (<Image src={photo.profil_picture} alt={photo.alt} key={photo.id} />)
-                  : ''
-                )}
-              </Order>
+          <Order >
+            {profilData.map(photo => !!photo.profil_picture
+              ? (<Image src={photo.profil_picture} alt={photo.alt} key={photo.id} />)
+              : ''
+            )}
+          </Order>
 
-              <div>
-                {profilData.map(text => (
-                  <OneLine>
-                    <ProfilParagraph key={text.id}>{text.profil_text_fr}</ProfilParagraph>
-                  </OneLine>))}
-              </div>
-            </Container>
-          )}
+          <div>
+            {profilData.map(text => (
+              <OneLine>
+                <ProfilParagraph key={text.id}>{text.profil_text_fr}</ProfilParagraph>
+              </OneLine>))}
+          </div>
+        </Container>
       </>
     )
   }
 }
-
 
 export default FrProfil

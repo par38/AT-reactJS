@@ -30,24 +30,20 @@ class FrHome extends Component {
     // . console.log("this.state render : " + this.state)
     const { homePicture: { picture_large }, isLoading } = this.state;
 
+    if (isLoading) {
+      return <div> Loading... </div>
+    }
     return (
       <>
-        {isLoading ?
-          <div> Loading... </div>
-          :
-          (
-            <div className="backgroundDiv">
-
-              <div className="backgroundImg" style={{
-                backgroundImage: `url(${picture_large})`
-              }} >
-                <div className="headerHome">
-                  <FrHeader />
-                </div>
-              </div>
+        <div className="backgroundDiv">
+          <div className="backgroundImg" style={{
+            backgroundImage: `url(${picture_large})`
+          }} >
+            <div className="headerHome">
+              <FrHeader />
             </div>
-          )
-        }
+          </div>
+        </div>
       </>
     )
   }

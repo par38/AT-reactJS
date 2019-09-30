@@ -30,27 +30,25 @@ class FrContact extends Component {
 
     // . console.log("render destructure :", { linkedin })
 
+    if (isLoading) {
+      return <div>Loading...</div>
+    }
+
     return (
       <>
-        {isLoading ?
-          <div>Loading...</div> :
-
-          (
-            <div className="contact">
-              <H2>{address_street}</H2>
-              <NotH2>{address_city}</NotH2>
-              <br />
-              <H2><a href={`mailto:${mail}`}>{mail}</a></H2>
-              {/* vieille syntaxe :
+        <div className="contact">
+          <H2>{address_street}</H2>
+          <NotH2>{address_city}</NotH2>
+          <br />
+          <H2><a href={`mailto:${mail}`}>{mail}</a></H2>
+          {/* vieille syntaxe :
             <a href={"mailto:" + mail}>email</a>
             */}
-              <br />
-              <H2>{tel}</H2>
-              <br />
-              <NotH2><a href={linkedin} target="_blank" rel="noopener noreferrer">Linkedin</a></NotH2>
-            </div>
-          )
-        }
+          <br />
+          <H2>{tel}</H2>
+          <br />
+          <NotH2><a href={linkedin} target="_blank" rel="noopener noreferrer">Linkedin</a></NotH2>
+        </div>
       </>
     )
   }

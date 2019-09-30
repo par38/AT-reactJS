@@ -4,8 +4,6 @@ import M from 'materialize-css';
 
 import routes from '../../routes';
 
-import 'materialize-css/dist/css/materialize.min.css'
-
 import './FrMenu.css'
 
 class FrMenu extends Component {
