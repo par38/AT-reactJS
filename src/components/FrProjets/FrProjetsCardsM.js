@@ -8,11 +8,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-// import styled from 'styled-components'
 import { H2, Paragraph } from '../Styled-components'
 
-import './FrProjetsCardsM.css'
-
+import './FrProjetsCards.css'
 
 // const regexId = /[\s\\.,:;?!\-_€$<>]/gi;
 
@@ -33,12 +31,11 @@ const FrProjetsCardsM = (
   // . console.log("projectId : " + projectId)
 
   return (
-    <div className="col s6 m6 l6" id="no-border">
+    <div className="col s6 m6 l6">
 
       {/* // ? details/title-kebab-case/3 */}
       {/* // / details/1 */}
       <NavLink to={`/details/${projectId}`}>
-        {/* <NavLink to={`/details/${projectLink}`}> */}
 
         <div className="card">
           <div className="card-image hoverable">
@@ -53,7 +50,7 @@ const FrProjetsCardsM = (
 
             />
           </div>
-          <div className="card-content" id="card-content-at">
+          <div className="card-content">
             <H2>{city}</H2>
             <Paragraph>{title}</Paragraph>
           </div>

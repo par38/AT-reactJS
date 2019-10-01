@@ -31,18 +31,18 @@ class FrMenu extends Component {
               elem.name != null
             )
 
-            .map(prop => (
+            .map(element => (
 
-              <li key={prop.path}>
+              <li key={element.path}>
                 <NavLink
                   className="waves-effect sidenav-close sidenav-font"
                   exact
-                  to={prop.path}
+                  to={element.path}
                   activeClassName="active"
                   activeStyle={{ color: 'LightGray' }}
                 >
                   {/* / le sidenav de materialize perd l'effet active si utilisé avec Styled-components */}
-                  {prop.name}
+                  {element.name}
                 </NavLink>
               </li>
             ))

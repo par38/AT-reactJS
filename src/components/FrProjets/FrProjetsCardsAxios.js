@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import FrProjetsCardsM from './FrProjetsCardsM';
+import './FrProjetsCards.css'
 
 class FrProjetsCardsAxios extends Component {
 	state = {

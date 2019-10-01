@@ -1,3 +1,7 @@
+.sidenav {
+  width: 50vw;
+}
+
 /* / ---------ICON ------------*/
 
 .material-icons {
@@ -29,9 +33,6 @@
 }
 
 
-.sidenav {
-  width: 50vw;
-}
 
 .fixed-menu {
   position: fixed;
