@@ -7,6 +7,7 @@ import axios from 'axios';
 
 import FrHeader from '../FrHeader/FrHeader'
 import './FrHome.css';
+
 class FrHome extends Component {
   state = {
     homePicture: [],
