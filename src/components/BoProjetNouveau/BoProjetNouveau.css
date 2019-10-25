@@ -1,0 +1,60 @@
+.parallaxDiv {
+  position:relative; 
+  height:75vh; 
+  overflow:hidden;
+}
+
+.parallaxImg {
+  position: absolute; 
+  background-attachment: fixed;
+  background-position: center 0;
+  background-size: cover;
+  width:100%; 
+  height:75vh;
+}
+
+.containerImg {
+  position: relative;
+  margin-bottom: 0.6vw;
+
+}
+.responsive-img{
+  width: 100%;
+}
+
+#credit-parallax {
+  position: absolute;
+  width:100%;
+  bottom: 0px;
+  right: 0vh;
+  line-height: calc(7px + 1.6vw);
+  text-align: end;
+  vertical-align: middle;
+  padding: 0.6vw 0.6vw 0.6vw 0;
+  margin-bottom: 0;
+
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0.0));
+
+  color: white;
+  font-size: calc(7px + .4vw);
+}
+
+#credit-others {
+  position: absolute;
+  width:100%;
+  bottom: 5px;
+  right: 0vh;
+  line-height: calc(7px + 1.6vw);
+  text-align: end;
+  vertical-align: middle;
+  padding: 0.6vw 0.6vw 0.6vw 0;
+  margin-bottom: 0;
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0.0));
+  color: white;
+  font-size: calc(7px + .4vw);
+}
+
+#label{
+  font-size: 12px;
+  font-weight: bold;;
+}
