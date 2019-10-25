@@ -1,0 +1,44 @@
+.container {
+  width: 97.5vw;
+  max-width: 97.5vw;
+} 
+
+img {
+  height: auto;
+}
+
+.card.horizontal .card-stacked .card-content {
+  flex-grow: 0;
+}
+
+/* .card{ */
+  /* supprime le cadre et l'ombre de la card Materialize */
+  /*box-shadow: none;           /* / OK en double card + hover*/
+/* } */
+
+/* .card-image { */
+  /* la photo est agrandie, en remplissant tout l'espace */
+  /* background-size: cover; */
+  /* et l'exedent est caché */
+  /* overflow: hidden; */
+  
+  /* height: 36vw; */
+/* } */
+
+/* .hoverable:hover { */
+  /* supprime le cadre et l'ombre de la card Materialize */
+  /*box-shadow: none;          /* / OK en double card + hover */
+  /* effet provisoire d'opacité */
+  /* transition: opacity .25s;
+  opacity: 0.6;
+}
+
+#imgAT { */
+  /*height: 36vw;               /* / OK en double #imgAT + .card-image */
+/* }
+
+.card-content { */
+  /* effacement du padding du texte, prévu par Materialize */
+  /* padding-left: 0;
+  padding-top: 1vw;
+} */
