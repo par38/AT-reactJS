@@ -9,7 +9,7 @@ const FrHeader = () => {
   return (
     <div className='header'>
       <FrMenu style={{ zIndex: 1 }} />
-      <img
+      <img id="logoAT"
         src={logo}
         alt="logo Atelier TARABUSI"
 
