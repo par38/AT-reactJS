@@ -1,4 +1,4 @@
-React (Styled Components) + NodeJS + mySQL
+## React (Styled Components) + NodeJS + mySQL
 
 ![landing-page](/src/assets/screenshots/screenshot-desktop-AT-1.png?raw=true)
 
