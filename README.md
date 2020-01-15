@@ -1,4 +1,7 @@
-React (Styled Components) + NodeJS + mySQL
+## React (Styled Components) + NodeJS + mySQL
+
+# screenshots in DEV branch : readme
+
 
 ![landing-page](/src/assets/screenshots/screenshot-desktop-AT-1.png?raw=true)
 
