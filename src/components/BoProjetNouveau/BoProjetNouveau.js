@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-import { OneLine, H1, Paragraph, H2, NotH2 } from '../Styled-components'
+// import { OneLine, H1, Paragraph, H2, NotH2 } from '../Styled-components'
+import { NotH2 } from '../Styled-components'
 import { Button } from 'react-materialize'
 
 import './BoProjetNouveau.css'
@@ -45,6 +46,7 @@ class BoProjetNouveau extends Component {
   };
 
   handleChange = (e) => {
+    if (e.target.value.startsWith("https://drive.google.com/open?id=")) { e.target.value.replace("https://drive.google.com/open?id=", "https://drive.google.com/uc?export=view&id=") }
     this.setState({ [e.target.name]: e.target.value })
   }
 
@@ -72,7 +74,7 @@ class BoProjetNouveau extends Component {
       surface_area,
       cost } = this.state;
 
-    console.log("render this.state : ", this.state)
+    // . console.log("render this.state : ", this.state)
 
 
     return (

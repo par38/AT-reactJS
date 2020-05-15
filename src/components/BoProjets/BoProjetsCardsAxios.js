@@ -7,7 +7,8 @@ import axios from 'axios';
 
 import BoProjetsM from './BoProjetsCardsM';
 import { NotH2 } from '../Styled-components'
-import { Button, Icon } from 'react-materialize';
+import { Button } from 'react-materialize';
+// import { Button, Icon } from 'react-materialize';
 import './BoProjets.css'
 
 class BoProjetsCardsAxios extends Component {

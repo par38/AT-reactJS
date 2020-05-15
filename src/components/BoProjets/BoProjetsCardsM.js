@@ -8,7 +8,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { H2, Paragraph, NotH2 } from '../Styled-components'
+import { H2, Paragraph } from '../Styled-components'
+// import { H2, Paragraph, NotH2 } from '../Styled-components'
+
 
 import './BoProjets.css'
 
